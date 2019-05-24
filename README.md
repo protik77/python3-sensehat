@@ -31,6 +31,6 @@ See the [Sense Hat API docs](https://pythonhosted.org/sense-hat/) for more Sense
 ### Changes made from the original repository:
 
 * Python `3.4.2` based.
-* Based on official `arm32v7/debian:jessie` based rather than `armhf/ubuntu` image which is not supported anymore. Also the required `RTIMULIB` version is only supported for `debian:jessie`
+* Based on official `arm32v7/debian:jessie` based rather than `armhf/ubuntu` image which is not supported anymore. Also the required `RTIMULIB` version is only supported for `debian:jessie`.
 * Updated `RTIMULIB` to version `7.2.1-3`. Even though `7.2.1-4` and `7.2.1-5` are out there, they don't work with `debian:jessie` based image.
 * Moved test code `test.py` into `/code` directory.

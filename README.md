@@ -1,5 +1,5 @@
 
-# Python3 based Raspberry Pi Sensehat container :snake:
+# Python3 based Raspberry Pi Sense HAT container :snake:
 
 :warning: This project is forked from [bmwshop/sensehat](https://github.com/bmwshop/sensehat).
 
@@ -22,11 +22,11 @@ Now run the test code by doing,
 python3 test.py
 ```
 
-This should print the current temperature and show the message "It worked!".
+This should print the current temperature and show the message "It worked!" in the LED matrix of the Sense HAT.
 
 Type `exit` and this should give back the original shell. The temporary container will be removed automatically.
 
-See the [SenseHat API docs](https://pythonhosted.org/sense-hat/) for more SenseHat API.
+See the [Sense Hat API docs](https://pythonhosted.org/sense-hat/) for more Sense Hat API.
 
 ### Changes made from the original repository:
 

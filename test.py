@@ -1,7 +1,12 @@
 from sense_hat import SenseHat
 
-sense = SenseHat()
 
-temp = sense.get_temperature_from_humidity()
-print("Temperature: %s C" % temp)
-sense.show_message("successfully installed")
+if __name__ == "__main__":
+
+    sense = SenseHat()
+    sense.clear()
+
+    temperature = sense.get_temperature_from_humidity()
+    print("Current temperature: {} C\n".format(temperature))
+
+    sense.show_message("successfully installed!")

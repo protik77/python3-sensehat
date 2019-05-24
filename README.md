@@ -2,7 +2,7 @@
 
 ## Note: This project is forked from [bmwshop/sensehat](https://github.com/bmwshop/sensehat).
 
-## Based on Python `3.4.2` to be exact.
+## Based on :snake: Python `3.4.2` to be exact.
 
 ### Using the docker image:
 
@@ -11,7 +11,7 @@ Create a temporary container,
 docker run --privileged -it protik77/python3-sensehat bash
 ```
 
-This should pull the image from the docker hub, create a temporary container with an interactive shell. The prompt at this point should look like,
+The command above should pull the image from the docker hub, create a temporary container with an interactive shell. The prompt at this point should look like,
 ```bash
 root@0cab39t3d53:/code#
 ```

@@ -1,4 +1,5 @@
-# Docker container for Raspberry Pi Sensehat with Python 3! :snake:
+
+# Python3 based Raspberry Pi Sensehat container :snake:
 
 :warning: This project is forked from [bmwshop/sensehat](https://github.com/bmwshop/sensehat).
 

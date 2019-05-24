@@ -1,6 +1,8 @@
 FROM arm32v7/ubuntu
 MAINTAINER dima@us.ibm.com
 
+ARG RTIMULIB_VERSION=7.2.1-4
+
 RUN apt-get update \
     && apt-get install --no-install-recommends --no-install-suggests -y \
     apt-utils \
@@ -11,18 +13,18 @@ RUN apt-get update \
 
 WORKDIR /tmp
 
-RUN curl -LO  https://archive.raspberrypi.org/debian/pool/main/r/rtimulib/librtimulib-dev_7.2.1-4_armhf.deb \
- && curl -LO https://archive.raspberrypi.org/debian/pool/main/r/rtimulib//librtimulib-utils_7.2.1-4_armhf.deb \
- && curl -LO https://archive.raspberrypi.org/debian/pool/main/r/rtimulib/librtimulib7_7.2.1-4_armhf.deb \
- && curl -LO https://archive.raspberrypi.org/debian/pool/main/r/rtimulib/python3-rtimulib_7.2.1-4_armhf.deb \
+RUN curl -LO  https://archive.raspberrypi.org/debian/pool/main/r/rtimulib/librtimulib-dev_${RTIMULIB_VERSION}_armhf.deb \
+ && curl -LO https://archive.raspberrypi.org/debian/pool/main/r/rtimulib//librtimulib-utils_${RTIMULIB_VERSION}_armhf.deb \
+ && curl -LO https://archive.raspberrypi.org/debian/pool/main/r/rtimulib/librtimulib7_${RTIMULIB_VERSION}_armhf.deb \
+ && curl -LO https://archive.raspberrypi.org/debian/pool/main/r/rtimulib/python3-rtimulib_${RTIMULIB_VERSION}_armhf.deb \
  && curl -LO https://archive.raspberrypi.org/debian/pool/main/p/python-sense-hat/python3-sense-hat_2.2.0-1_armhf.deb
  
  
 RUN dpkg -i \
-    librtimulib-dev_7.2.1-4_armhf.deb \
-    librtimulib-utils_7.2.1-4_armhf.deb \
-    librtimulib7_7.2.1-4_armhf.deb \
-    python3-rtimulib_7.2.1-4_armhf.deb \
+    librtimulib-dev_${RTIMULIB_VERSION}_armhf.deb \
+    librtimulib-utils_${RTIMULIB_VERSION}_armhf.deb \
+    librtimulib7_${RTIMULIB_VERSION}_armhf.deb \
+    python3-rtimulib_${RTIMULIB_VERSION}_armhf.deb \
     python3-sense-hat_2.2.0-1_armhf.deb
 
 
@@ -34,4 +36,4 @@ RUN mkdir /code
 ADD test.py /code/test.py
 WORKDIR /code
 
-CMD ["python3", "/code/test.py"]
+CMD ["python3", "test.py"]

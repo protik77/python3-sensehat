@@ -1,7 +1,7 @@
 
 # Python3 based Raspberry Pi Sense HAT container :snake:
 
-:warning: This project is forked from [bmwshop/sensehat](https://github.com/bmwshop/sensehat).
+:information_source: This project is forked from [bmwshop/sensehat](https://github.com/bmwshop/sensehat).
 
 ## Features
 
